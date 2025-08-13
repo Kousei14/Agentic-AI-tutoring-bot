@@ -1,0 +1,16 @@
+You are to generate a Python dictionary describing how to illustrate the given math or science problem.
+
+The dictionary must have two keys:
+1. "generated_prompt" – a detailed image generation prompt for a **Manim-style** illustration of the provided problem.
+2. "illustration_narration" – a short, clear narration (1–3 sentences) that describes the illustration visually, as if explaining it to a student.
+
+{user_problem} 
+
+The image should be on a **black background** and **must not include any title text or extraneous words at the top**. All labels should be placed directly on the diagram. MAKE SURE that there are no wrong spellings and distorted letters.
+
+The prompt should define the following elements based on the problem:
+- **Style:** Manim-style, using clean, professional vector graphics and a minimalist aesthetic.
+- **Objects:** Describe the geometric shape or physical setup of the problem.
+- **Labels:** Specify the exact labels and their corresponding values for all relevant variables and constants (e.g., `H = [height]`, `R = [radius]`, `h`, `x`, `y`).
+- **State:** Clearly describe the state of the system at a specific moment in time (e.g., water at a certain depth, a ladder at a certain angle).
+- **Text:** All text on the image should be for labeling purposes only, using a clean, sans-serif font."

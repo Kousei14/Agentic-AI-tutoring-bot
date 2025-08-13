@@ -1,0 +1,16 @@
+# API
+fastapi
+uvicorn
+pydantic
+requests
+
+# Gen AI 
+openai
+google-genai
+google-cloud-aiplatform
+
+# Video, Audio Processing
+moviepy
+manim
+gtts
+TTS
