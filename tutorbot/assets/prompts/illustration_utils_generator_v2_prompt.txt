@@ -2,9 +2,9 @@ You are to generate a Python dictionary describing how to illustrate the given m
 
 The dictionary must have **three keys**:
 
-1. `"generated_prompt"` – a detailed image generation prompt for a **Manim-style** illustration of the provided problem.
-2. `"illustration_narration"` – a short, clear narration (1–3 sentences) that describes the illustration visually, as if explaining it to a student.
-3. `"animation_prompt"` – a detailed description of how to animate the image generated from `"generated_prompt"` using Veo, including the movement of objects, transitions, and any other motion that would best represent the **state and dynamics** of the problem, while keeping it visually consistent with the Manim style. **DO NOT ANIAMATE THE LABELS AND TEXTS IN THE IMAGE**.
+1. "illustration_prompt" – a detailed image generation prompt for a **Manim-style** illustration of the provided problem.
+2. "illustration_narration" – a short but **descriptive narration** (1–3 sentences) that clearly paints the scene of the illustration, describing the scene in detail, as if explaining the picture to a student. **DO NOT INCLUDE THE ANSWER TO THE PROBLEM**
+3. "animation_prompt" – a detailed description of how to animate the illustration so that the animation is **strictly synchronized with the narration**. The animation must act out the narration step by step: when the narration introduces an object, the animation should draw or reveal that object; when the narration highlights a relationship, the animation should visually emphasize it. **Do not animate the labels or text**, and do not provide or hint at the solution to the problem. The animation should only bring the narrated scene to life. The video generated must not include audio of a person narrating. Instead, it should only include sound effects synchronized with the visual actions (e.g., a soft 'swish' for drawing lines, a 'ding' for labels appearing, or subtle movement sounds when objects are emphasized).
 
 {user_problem}
 

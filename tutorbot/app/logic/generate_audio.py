@@ -24,16 +24,16 @@ class AudioGeneratorAgent:
             script = script
         )
 
-        # data -> wav / mp3
+        # data to wav
         if mode == "gemini_tts":
             self.save_wave_file(
-                filename = filename,
+                filename = f"{filename}.wav",
                 pcm = data
             )
-
+        # data to mp3
         elif mode == "default_tts":
             self.save_mp3_file(
-                filename = filename,
+                filename = f"{filename}.mp3",
                 data = data
             )
         
@@ -67,9 +67,9 @@ class AudioGeneratorAgent:
                          mode: Literal["default_tts", "gemini_tts"] = "default_tts") -> float:
         
         if mode == "gemini_tts":
-            return self.get_wav_duration(filename)
+            return self.get_wav_duration(f"{filename}.wav")
         elif mode == "default_tts":
-            return self.get_mp3_duration(filename)
+            return self.get_mp3_duration(f"{filename}.mp3")
 
     def get_wav_duration(self,
                          filename: str):

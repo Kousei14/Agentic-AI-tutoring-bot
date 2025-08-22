@@ -17,7 +17,11 @@ class PromptFormatter:
         match mode:
             case ("answer_generator" | 
                   "illustration_utils_generator" | 
-                  "illustration_utils_generator_v2"):
+                  "illustration_utils_generator_v2" |
+                  "query_processor"):
+                
                 return prompt.format(user_problem = user_problem)
+            
             case _:
+
                 return prompt

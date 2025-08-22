@@ -4,6 +4,27 @@ from tutorbot.app.logic.generate_prompt import PromptFormatter
 from tutorbot.assets.models.TextGeneration import TextGenerationModels
 from tutorbot.utils.TextUtils import strip_code_block_fence
 
+class QueryProcessorAgent:
+    def __init__(self):
+        
+        self.prompt_generator = PromptFormatter()
+
+    def generate(self,
+                 prompt: str):
+        
+        query_processor_prompt = self.prompt_generator.read_prompt(
+            user_problem = prompt,
+            mode = "query_processor"
+        )
+        response = TextGenerationModels(
+            mode = "gemini",
+            model = "gemini-2.5-flash",
+        ).generate(
+            prompt = query_processor_prompt
+            )
+        
+        return response
+    
 class AnswerGeneratorAgent:
     def __init__(self):
 

@@ -57,7 +57,14 @@ def get_physics_problem(index: int = None) -> str:
         "What is the centripetal force on a 1 kg object moving in a circle of radius 2 m at 4 m/s?",
         "What is the current through a 10-ohm resistor connected to a 12 V battery?",
         "A wave has a frequency of 500 Hz and a wavelength of 0.6 m. What is its speed?",
-        "How much heat is required to raise the temperature of 200 g of water from 25°C to 75°C? (Specific heat of water = 4.18 J/g°C)"
+        "How much heat is required to raise the temperature of 200 g of water from 25°C to 75°C? (Specific heat of water = 4.18 J/g°C)",
+        """A playground roundabout has a moment of inertia of 500 kg m2 about its axis of rotation. A constant torque of 200 N m is applied tangentially to the rim of the roundabout.
+            (a) The angular acceleration of the roundabout is 0.35 rad s –2. Show that the frictional torque acting on the roundabout is 25 N m.
+            (b) A child of mass 50 kg sits on the roundabout at a distance of 1.25 m from the axis of rotation and the 200 N m torque is reapplied. Calculate the new angular acceleration of the roundabout.
+            (c) The 200 N m torque in part (b) is applied for 3 s then removed.
+            (i) Calculate the maximum angular velocity of the roundabout and child.
+            (ii) The 200 N m torque is now removed. Find the time taken by the roundabout and
+            child to come to rest."""
     ]
     
     return physics_problems[index] if index is not None else physics_problems[0]
@@ -74,3 +81,10 @@ def get_chemistry_problem(index: int = None) -> str:
     ]
 
     return chemistry_problems[index] if index is not None else chemistry_problems[0]
+
+def get_finance_problems(index: int):
+    finance_problems = [
+        "If my monthly base pay is 48,900 pesos, and non-taxable allowance of 2800 pesos given on the first cut-off of the month (15th), if my shift is 2 pm - 12 am, 2 hours allocated to night shift, 2 hours allocated to midshfit, 4 hours to regular hours everyday, if night shift is 18% of hourly rate, and midshift is 14% of hourly rate, given that mandatory benefits (philippines) are deducted on the 30th cutoff, how much will be my salary every cutoff"
+        ]
+    
+    return finance_problems[index]
